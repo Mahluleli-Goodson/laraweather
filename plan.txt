@@ -1,0 +1,21 @@
+
+
+# To validate this hypothesis we want to track and display weather data to be able to validate this hypothesis. #
+
+Database Tables:
+1. Places
+    - id
+    - name
+    - lat
+    - lng
+    - slug
+
+2. Temperature
+    - place_id
+    - temp
+    - pressure
+    - humidity
+    - temp_min
+    - temp_max
+
+Scheduled -> 2minutes Interval
