@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePlacesTable extends Migration
+class AddForeignKeysToTemperature extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreatePlacesTable extends Migration
      */
     public function up()
     {
-        Schema::create('places', function (Blueprint $table) {
-            $table->integer('id', true)->unique();
-            $table->string('name');
-            $table->string('lat');
-            $table->string('lng');
-            $table->string('slug');
-            $table->timestamps();
+        Schema::table('temperature', function (Blueprint $table) {
+            $table->foreign('place_id', 'temp_places_fk')->references('id')->on('places')->onDelete('cascade');
         });
     }
 
@@ -30,6 +25,8 @@ class CreatePlacesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('places');
+        Schema::table('temperature', function (Blueprint $table) {
+            $table->dropForeign('temp_places_fk');
+        });
     }
 }

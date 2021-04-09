@@ -14,8 +14,15 @@ class CreateTemperatureTable extends Migration
     public function up()
     {
         Schema::create('temperature', function (Blueprint $table) {
-            $table->id();
+            $table->integer('id', true)->unique();
+            $table->integer('place_id');
+            $table->string('temperature');
+            $table->string('humidity');
+            $table->string('pressure');
+            $table->string('temp_min');
+            $table->string('temp_max');
             $table->timestamps();
+
         });
     }
 

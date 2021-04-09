@@ -18,4 +18,10 @@ Database Tables:
     - temp_min
     - temp_max
 
-Scheduled -> 2minutes Interval
+# Scheduled -> 2minutes Interval
+
+# For this purpose you should use the following API: https://openweathermap.org/current
+
+  Your license key is: bf65d8b174418831a16055a19f50144f
+
+# api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
