@@ -10,7 +10,7 @@ This project has been proved to work in the following environment:
 
 * Laravel 7.30.4
 * PHP 7.2
-* Valet 2.4.2 (note: this is optional in case you want to view frontend)
+* Valet 2.4.2
 * Composer 1.10.20
 
 ## Set up
