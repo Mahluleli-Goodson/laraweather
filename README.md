@@ -18,6 +18,7 @@ This project has been proved to work in the following environment:
 * git clone project
 * rename `.env.example` to `.env`
 * generate your laravel APP_KEY
+* add your API_KEY in `.env`
 * run `composer install`
 * run `npm i` (optional)
 * php artisan migrate --seed
